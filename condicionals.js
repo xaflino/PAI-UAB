@@ -68,20 +68,20 @@
 // }
 
 // 14.9.-
-let gelat= prompt("Vols Con (c) o Terrina (t)?");
-let sabor= prompt("Quin sabor vols? Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Atmelles");
-let PreuT=3.95
-let PreuC=3.45
-let A=0.5
-let B=1
-let CA=3.95
-let TA=4.45
-let CB=4.45
-let TB=4.95
+// let gelat= prompt("Vols Con (c) o Terrina (t)?");
+// let sabor= prompt("Quin sabor vols? Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Atmelles");
+// let PreuT=3.95
+// let PreuC=3.45
+// let A=0.5
+// let B=1
+// let CA=3.95
+// let TA=4.45
+// let CB=4.45
+// let TB=4.95
 
-if (sabor!=="Vainilla"&&sabor!=="Xocolata"&&sabor!=="Turró"&&sabor!=="Menta"&&sabor!=="Oreo"&&sabor!=="Crema"&&sabor!=="Gerds"&&sabor!=="Atmelles"&&gelat!=="c"&&gelat!=="t"){
-    console.log("Error, dades malament");
-} else if (gelat==="c"){
+// if (sabor!=="Vainilla"&&sabor!=="Xocolata"&&sabor!=="Turró"&&sabor!=="Menta"&&sabor!=="Oreo"&&sabor!=="Crema"&&sabor!=="Gerds"&&sabor!=="Atmelles"&&gelat!=="c"&&gelat!=="t"){
+//     console.log("Error, dades malament");
+// } else if (gelat==="c"){
     if(sabor==="Vainilla"||sabor==="Xocolata"){
         console.log("El preu es "+PreuC+"$");
     }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
@@ -89,12 +89,21 @@ if (sabor!=="Vainilla"&&sabor!=="Xocolata"&&sabor!=="Turró"&&sabor!=="Menta"&&s
     }else{
         console.log("El preu es "+CB+"$");
     }
-} else if (gelat==="t"){
-    if(sabor==="Vainilla"||sabor==="Xocolata"){
-        console.log("El preu es "+PreuT+"$");
-    }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
-        console.log("El preu es "+TA+"$");
-    }else{
-        console.log("El preu es "+TB+"$");
-    }
+// } else if (gelat==="t"){
+//     if(sabor==="Vainilla"||sabor==="Xocolata"){
+//         console.log("El preu es "+PreuT+"$");
+//     }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
+//         console.log("El preu es "+TA+"$");
+//     }else{
+//         console.log("El preu es "+TB+"$");
+//     }
+// }
+
+// 16.3.- Escriu un programa que, donat un nombre N, escrigui a la consola la suma de tots els nombres entre 1 i N.
+let num=parseInt(prompt("Escriu un nombre"));
+let suma=0;
+
+for(let i=1; i<=num; i++){
+   suma+=i;
 }
+console.log(suma);
