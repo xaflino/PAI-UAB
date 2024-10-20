@@ -57,12 +57,44 @@
 // En cas que la quantitat sigui 30€ o més, es mostrarà a la consola un missatge indicant que el cost total és de 30€ donat que el transport és gratis.
 // En cas que la quantitat sigui inferior a 30€, es mostrarà un missatge dient el preu total que consistirà en l’introduït més 4.95€ en concepte de cost d’enviament.
 
-let pagament = parseFloat(prompt("Introdueix la quantitat a pagar:"));
+// let pagament = parseFloat(prompt("Introdueix la quantitat a pagar:"));
 
-if (pagament>=30) {
-    console.log("Cost total=30$");
-} else {
-    let costEnvio= 4.95;
-    let total= pagament + costEnvio;
-    console.log("Cost total="+total+"$");
+// if (pagament>=30) {
+//    console.log("Cost total=30$");
+// } else {
+//     let costEnvio= 4.95;
+//     let total= pagament + costEnvio;
+//    console.log("Cost total="+total+"$");
+// }
+
+// 14.9.-
+let gelat= prompt("Vols Con (c) o Terrina (t)?");
+let sabor= prompt("Quin sabor vols? Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Atmelles");
+let PreuT=3.95
+let PreuC=3.45
+let A=0.5
+let B=1
+let CA=3.95
+let TA=4.45
+let CB=4.45
+let TB=4.95
+
+if (sabor!=="Vainilla"&&sabor!=="Xocolata"&&sabor!=="Turró"&&sabor!=="Menta"&&sabor!=="Oreo"&&sabor!=="Crema"&&sabor!=="Gerds"&&sabor!=="Atmelles"&&gelat!=="c"&&gelat!=="t"){
+    console.log("Error, dades malament");
+} else if (gelat==="c"){
+    if(sabor==="Vainilla"||sabor==="Xocolata"){
+        console.log("El preu es "+PreuC+"$");
+    }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
+        console.log("El preu es "+CA+"$");
+    }else{
+        console.log("El preu es "+CB+"$");
+    }
+} else if (gelat==="t"){
+    if(sabor==="Vainilla"||sabor==="Xocolata"){
+        console.log("El preu es "+PreuT+"$");
+    }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
+        console.log("El preu es "+TA+"$");
+    }else{
+        console.log("El preu es "+TB+"$");
+    }
 }
