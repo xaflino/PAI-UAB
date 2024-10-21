@@ -1,9 +1,9 @@
 // 13.1.- Escriu un programa que donat un número llegit amb prompt escrigui el missatge "el número llegit és negatiu" si el número és més petit que zero.
-//   let numeroNegatiu = parseInt(prompt("Introdueix un número:"));
-//   if (numeroNegatiu<0) {
-//      document.write("El numero llegit es negatiu");
-//      console.log("El numero llegit es negatiu");
-//  }
+//    let numeroNegatiu = parseInt(prompt("Introdueix un número:"));
+//    if (numeroNegatiu<0) {
+//       document.write("El numero llegit es negatiu");
+//       console.log("El numero llegit es negatiu");
+//   }
 
 // 14.2.- Escriu un programa que donat un número llegit amb prompt, escrigui el missatge “el número llegit és parell” si el número es parell i “el número llegit es senar” en cas contrari.
 
@@ -99,9 +99,55 @@
 //     }
 // }
 
-let a = parseFloat(prompt("hh"));
-let b = parseFloat(prompt("hh"));
-let p = a*2 + b*2;
-let a = a*b;
-console.log(p+a);
+// 15.2.-
+let gelat = prompt("Terrina (t) o Con (c)?");
+let PreuT = 3.95;
+let PreuC = 3.45;
+let sabor = prompt("Quin sabor vols? Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Atmelles");
+let supl1 = 0.5;
+let supl2 = 1;
+
+if (gelat==="t"||gelat==="c"){
+    if (gelat==="t"){
+        switch (sabor){
+            case "Vainilla":
+            case "Xocolata":
+                console.log(PreuT);
+                break;
+            case "Oreo":
+            case "Turró":
+            case "Menta":
+                console.log(PreuT+supl1);
+                break;
+            case "Crema":
+            case "Atmelles":
+            case "Gerds":
+                console.log(PreuT+supl2);
+                break;
+            default:
+                console.log("Tens un error al sabor")       
+        }
+    } else if (gelat==="c"){
+        switch (sabor){
+            case "Vainilla":
+            case "Xocolata":
+                console.log(PreuC);
+                break;
+            case "Oreo":
+            case "Turró":
+            case "Menta":
+                console.log(PreuC+supl1);
+                break;
+            case "Crema":
+            case "Atmelles":
+            case "Gerds":
+                console.log(PreuC+supl2);
+                break;
+            default:
+                console.log("Tens un error al sabor")       
+        }
+    }
+} else {
+    console.log("Tens un error en les dades.");
+}
 
