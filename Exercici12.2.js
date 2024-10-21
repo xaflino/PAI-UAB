@@ -1,6 +1,6 @@
-let a = parseFloat(prompt("hh"));
-let b = parseFloat(prompt("hh"));
-let p = 2*a + 2*b;
+let a = parseFloat(prompt("Costat 1"));
+let b = parseFloat(prompt("Costat 2"));
+let perimetre = a*2 + b*2;
 let area = a*b;
-console.log(p);
-console.log(area);
+
+console.log("El perimetre fa "+perimetre+" cm, l'Àrea fa "+area+" cm.");
