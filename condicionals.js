@@ -99,3 +99,9 @@
 //     }
 // }
 
+let a = parseFloat(prompt("hh"));
+let b = parseFloat(prompt("hh"));
+let p = a*2 + b*2;
+let a = a*b;
+console.log(p+a);
+
