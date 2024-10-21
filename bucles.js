@@ -62,11 +62,11 @@
 
 
 // 17.3.- Escriu un programa, fent servir la instrucció while, que, donat un número N, escrigui a la consola tots els números de N a 1 (per tant, en ordre descendent). Observa el que passa si N < 1
-let n = parseInt(prompt("Escriu un nombre n"));
-let text="";
-let i=n;
-while(i>0){
-    text+=i;
-    i--;
-}
-console.log(text);
+// let n = parseInt(prompt("Escriu un nombre n"));
+// let text="";
+// let i=n;
+// while(i>0){
+//     text+=i;
+//     i--;
+// }
+// console.log(text);
