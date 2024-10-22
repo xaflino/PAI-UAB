@@ -100,14 +100,14 @@
 // }
 
 // 15.2.-
-let gelat = prompt("Terrina (t) o Con (c)?");
-let PreuT = 3.95;
-let PreuC = 3.45;
-let sabor = prompt("Quin sabor vols? Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Atmelles");
-let supl1 = 0.5;
-let supl2 = 1;
+// let gelat = prompt("Terrina (t) o Con (c)?");
+// let PreuT = 3.95;
+// let PreuC = 3.45;
+// let sabor = prompt("Quin sabor vols? Vainilla, Xocolata, Turró, Menta, Oreo, Crema, Gerds, Atmelles");
+// let supl1 = 0.5;
+// let supl2 = 1;
 
-if (gelat==="t"||gelat==="c"){
+//if (gelat==="t"||gelat==="c"){
     if (gelat==="t"){
         switch (sabor){
             case "Vainilla":
@@ -147,7 +147,7 @@ if (gelat==="t"||gelat==="c"){
                 console.log("Tens un error al sabor")       
         }
     }
-} else {
-    console.log("Tens un error en les dades.");
-}
+//} else {
+//    console.log("Tens un error en les dades.");
+//}
 
