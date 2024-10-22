@@ -82,13 +82,13 @@
 // if (sabor!=="Vainilla"&&sabor!=="Xocolata"&&sabor!=="Turró"&&sabor!=="Menta"&&sabor!=="Oreo"&&sabor!=="Crema"&&sabor!=="Gerds"&&sabor!=="Atmelles"&&gelat!=="c"&&gelat!=="t"){
 //     console.log("Error, dades malament");
 // } else if (gelat==="c"){
-    if(sabor==="Vainilla"||sabor==="Xocolata"){
-        console.log("El preu es "+PreuC+"$");
-    }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
-        console.log("El preu es "+CA+"$");
-    }else{
-        console.log("El preu es "+CB+"$");
-    }
+//     if(sabor==="Vainilla"||sabor==="Xocolata"){
+//         console.log("El preu es "+PreuC+"$");
+//     }else if (sabor==="Menta"||sabor==="Oreo"||sabor==="Turró"){
+//         console.log("El preu es "+CA+"$");
+//     }else{
+//         console.log("El preu es "+CB+"$");
+//     }
 // } else if (gelat==="t"){
 //     if(sabor==="Vainilla"||sabor==="Xocolata"){
 //         console.log("El preu es "+PreuT+"$");
@@ -108,46 +108,69 @@
 // let supl2 = 1;
 
 //if (gelat==="t"||gelat==="c"){
-    if (gelat==="t"){
-        switch (sabor){
-            case "Vainilla":
-            case "Xocolata":
-                console.log(PreuT);
-                break;
-            case "Oreo":
-            case "Turró":
-            case "Menta":
-                console.log(PreuT+supl1);
-                break;
-            case "Crema":
-            case "Atmelles":
-            case "Gerds":
-                console.log(PreuT+supl2);
-                break;
-            default:
-                console.log("Tens un error al sabor")       
-        }
-    } else if (gelat==="c"){
-        switch (sabor){
-            case "Vainilla":
-            case "Xocolata":
-                console.log(PreuC);
-                break;
-            case "Oreo":
-            case "Turró":
-            case "Menta":
-                console.log(PreuC+supl1);
-                break;
-            case "Crema":
-            case "Atmelles":
-            case "Gerds":
-                console.log(PreuC+supl2);
-                break;
-            default:
-                console.log("Tens un error al sabor")       
-        }
-    }
-//} else {
-//    console.log("Tens un error en les dades.");
-//}
+//     if (gelat==="t"){
+//         switch (sabor){
+//             case "Vainilla":
+//             case "Xocolata":
+//                 console.log(PreuT);
+//                 break;
+//             case "Oreo":
+//             case "Turró":
+//             case "Menta":
+//                 console.log(PreuT+supl1);
+//                 break;
+//             case "Crema":
+//             case "Atmelles":
+//             case "Gerds":
+//                 console.log(PreuT+supl2);
+//                 break;
+//             default:
+//                 console.log("Tens un error al sabor")       
+//         }
+//     } else if (gelat==="c"){
+//         switch (sabor){
+//             case "Vainilla":
+//             case "Xocolata":
+//                 console.log(PreuC);
+//                 break;
+//             case "Oreo":
+//             case "Turró":
+//             case "Menta":
+//                 console.log(PreuC+supl1);
+//                 break;
+//             case "Crema":
+//             case "Atmelles":
+//             case "Gerds":
+//                 console.log(PreuC+supl2);
+//                 break;
+//             default:
+//                 console.log("Tens un error al sabor")       
+//         }
+//     }
+// } else {
+//     console.log("Tens un error en les dades.");
+// }
 
+
+// 15.3.-
+let dia =prompt("Escriu dia (l,m,x,j,v,s,d)");
+
+switch (dia){
+    case "l":
+    case "m":
+    case "x":
+    case "j":
+    case "v":
+        console.log("Aquest dia es LABORABLE");
+        document.write("LABORABLE");
+        break;
+    case "s":
+    case "d":
+        console.log("Aquest dia es FESTIU");
+        document.write("FESTIU");
+        break;
+    default:
+        console.log("No es un dia de la setmana, subnormal");
+        document.write("SUBNORMAL");
+        break;
+}

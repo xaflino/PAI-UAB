@@ -71,3 +71,41 @@
 // }
 // console.log(text);
 
+
+//17.4.- Fibonacci
+
+// let n = parseInt(prompt("Introdueix un número per a la seqüència de Fibonacci:"));
+// let fib1 = 1, fib2 = 1;
+// let i = 3; 
+
+// if (n >= 1) {
+//     console.log(fib1); 
+// }
+// if (n >= 2) {
+//     console.log(fib2); 
+// }
+
+// while (i <= n) {
+//    let fibNext = fib1 + fib2; 
+//    console.log(fibNext); 
+//    fib1 = fib2; 
+//    fib2 = fibNext; 
+//    i++; 
+// }
+
+
+// 17.2.-
+// let i=5;
+// while (i<=20){
+//     console.log(i);
+//     i++;
+// }
+
+// 16.7.-
+// let N = parseInt(prompt("Donam un número"));
+// for(let i = 1; i<=10; i++){
+//     let multiplicacio = N * i;
+//     console.log(multiplicacio);
+// }
+
+
