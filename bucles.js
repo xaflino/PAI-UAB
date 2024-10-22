@@ -109,3 +109,21 @@
 // }
 
 
+// 16.11.-
+let N = parseInt(prompt(""));
+let M = parseInt(prompt(""));
+let series = [];
+let currentNum = '';
+
+for (let i = 0; i < M; i++) {
+    currentNum += N;
+    series.push(parseInt(currentNum));
+}
+
+let seriesSum = 0;
+for (let i = 0; i < series.length; i++) {
+    seriesSum += series[i];
+}
+
+console.log(series.join(' '));
+console.log("La suma de la sèrie és: " + seriesSum);
