@@ -1,0 +1,55 @@
+/* Estilos básicos para el formulario */
+
+/* Estilo general del formulario */
+form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para las etiquetas */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Estilo para los campos de entrada */
+input[type="text"], input[type="password"] {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo para el checkbox */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Estilo para los botones */
+button {
+    padding: 8px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #39c340;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para el formulario al pasar el ratón */  /*HECHO CON AYUDA DE ChatGPT*/
+form:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
