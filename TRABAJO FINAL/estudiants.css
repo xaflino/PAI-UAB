@@ -1,1 +1,44 @@
 /* Fitxer CSS estudiants */
+
+
+/* Estil general per als resultats */
+.resultat {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f9f9a9;
+    border: 1px solid #cccc00;
+    border-radius: 5px;
+}
+
+/* Llista d'accidents per districte */
+.resultat03 ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.resultat03 li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Formulari del districte */
+form {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e8f0fe;
+    border: 1px solid #0073e6;
+    border-radius: 5px;
+}
+
+select {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Títols dels resultats */
+h2 {
+    font-family: Georgia, serif;
+    color: #333333;
+}
