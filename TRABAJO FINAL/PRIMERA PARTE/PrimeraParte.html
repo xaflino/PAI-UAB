@@ -12,7 +12,7 @@
     <!-- Nom i cognoms -->
     <label for="nom">Nom i Cognoms:</label>
     <input type="text" id="nom" placeholder="Nom i Cognoms" onfocus="f()">
-    <p id="error-nom" class="error"></p>
+    <p id="error-nom" class="error"></p>  <!-- Sempre ficarem un pàrraf per a que pugui mostrar-se el missatge d'error -->
 
     <!-- Rang d'edats -->
     <label for="edat">Rang d'edats:</label>
@@ -29,18 +29,18 @@
 
     <!-- Codi postal -->
     <label for="codi-postal">Codi Postal:</label>
-    <input type="text" id="codi-postal" maxlength="5" placeholder="12345">
+    <input type="text" id="codi-postal" maxlength="5" placeholder="12345">  <!-- Màxim admetrà 5 dígits. La  funció de placeholder l'he tret amb el ChatGPT -->
     <p id="error-codi" class="error"></p>
 
     <!-- Correu electrònic -->
     <label for="email">Correu electrònic:</label>
-    <input type="email" id="email" placeholder="exemple@correu.cat">
+    <input type="email" id="email" placeholder="exemple@correu.com">
     <p id="error-email" class="error"></p>
 
     <!-- Contrasenya -->
     <label for="contrasenya">Contrasenya:</label>
     <input type="password" id="contrasenya" placeholder="Contrasenya">
-    <input type="checkbox" id="mostrar-contrasenya"> Mostra la contrasenya
+    <input type="checkbox" id="mostrar-contrasenya"> Mostra la contrasenya  <!-- Posem casella per poder mostrar contrasenya -->
     <p id="error-contrasenya" class="error"></p>
 
     <!-- Confirmar contrasenya -->
