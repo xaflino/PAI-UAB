@@ -1,60 +1,35 @@
-/* Fitxer CSS estudiants */
-/* Estilització general */
+/* Fitxer CSS */
 
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f8f9fa;
+    background-color: #e7e7e7;
     margin: 0;
-    width: 100%;
 }
 
-
-/* Secció de resultats */
+/* Resultats */
 #resultat01, #resultat02, #resultat03, #resultat04 {
-    background-color: #ffffe0; /* Groc clar */
-    border: 1px solid #ccc;
+    background-color: #ffffe0;
+    border: 1px solid #801f1f;
     padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Afegir ombra als resultats */
+    margin: 10px ;
 }
 
-/* Títols */
+/* Títol */
 h1, h2 {
-    color: #333;
+    color: #505050;
     text-align: center;
-    font-family: 'Georgia', serif; /* Millorar estil del títol */
-    text-transform: uppercase; /* Fer majúscules */
-    margin: 0;
-    width: 100%;
+    background-color: rgb(208, 139, 114);
 }
 
-/* Llista d'accidents */
+/* Llista */
 ul {
-    list-style-type: square; /* Canviar estil de la llista */
+    list-style-type: square;
     padding-left: 20px;
-    color: #555;
-    line-height: 1.8; /* Afegir espaiat */
 }
 
-li {
-    margin: 5px 0;
-    transition: transform 0.3s ease, color 0.3s ease; /* Efecte transició */
-}
-
-li:hover {
-    color: #007bff; /* Canviar color al passar el ratolí */
-    transform: scale(1.05); /* Lleuger augment */
-}
-
-/* Formulari de selecció */
+/* Formulari */
 #selectDistricte {
     font-size: 16px;
     padding: 5px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #ffffff; /* Afegir fons blanc */
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Ombra lleugera */
+    border: 1px solid rgb(208, 139, 114);
 }
