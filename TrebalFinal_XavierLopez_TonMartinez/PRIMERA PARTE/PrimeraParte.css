@@ -1,0 +1,39 @@
+/* Formulari */
+form {
+    width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+/* Etiquetes */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Camps d'entrada */
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 95%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Botons */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3973c3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Missatges d'error */
+.error {
+    color: red;
+    font-size: 12px;
+}

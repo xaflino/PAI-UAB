@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularis i Events</title>
+</head>
+<body>
+    <h1>Exercicis de Formularis i Events</h1>
+
+    <!-- Formulario i -->
+    <h2>Formulari i</h2>
+    <form id="form1">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" value="Mickey"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" value="Mouse"><br><br>
+        <button type="button" onclick="executarF1()">Enviar formulari i</button>
+    </form>
+
+    <!-- Formulario ii -->
+    <h2>Formulari ii</h2>
+    <form id="form2">
+        <input type="radio" id="yes" name="option" value="Sí" checked>
+        <label for="yes">Sí</label><br>
+        <input type="radio" id="no" name="option" value="No">
+        <label for="no">No</label><br>
+        <input type="radio" id="nsnc" name="option" value="NS/NC">
+        <label for="nsnc">NS/NC</label><br><br>
+        <button type="button" onclick="executarF2()">Enviar formulari ii</button>
+    </form>
+
+    <!-- Formulario iii -->
+    <h2>Formulari iii</h2>
+    <form id="form3">
+        <input type="checkbox" id="option1" name="option1" value="Sí" checked>
+        <label for="option1">Sí</label><br>
+        <input type="checkbox" id="option2" name="option2" value="No">
+        <label for="option2">No</label><br><br>
+        <button type="button" onclick="executarF3()">Enviar formulari iii</button>
+    </form>
+
+    <!-- Formulario iv -->
+    <h2>Formulari iv</h2>
+    <form id="form4">
+        <select id="dropdown" name="dropdown">
+            <option value="Sí" selected>Sí</option>
+            <option value="No">No</option>
+        </select><br><br>
+        <button type="button" onclick="executarF4()">Enviar formulari iv</button>
+    </form>
+</body>
+</html>

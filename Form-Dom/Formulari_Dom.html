@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="miFormulario">
+        <!-- Campo Nombre -->
+        <label for="nombre">Nom:</label>
+        <input type="text" id="nombre" placeholder="Escriu el teu nom" style="color: gray;"><br><br>
+    
+        <!-- Añadir comentarios -->
+        
+        <input type="checkbox" id="añadirComentarios">
+        <label for="añadirComentarios">Afegir comentaris</label><br><br>
+
+        <!-- 
+        <label for="añadirComentarios">Afegir comentaris?</label><br>
+        <input type="radio" name="comentarios" id="comentariosSi" value="si">
+        <label for="comentariosSi">Sí</label>
+        <input type="radio" name="comentarios" id="comentariosNo" value="no">
+        <label for="comentariosNo">No</label><br> 
+        -->
+    
+        <!-- Área de comentarios -->
+        <label for="comentarios">Comentaris:</label><br>
+        <textarea id="comentarios" disabled>Escriu aquí</textarea><br><br>
+    
+        <!-- Botón de enviar -->
+        <button type="button" id="enviar">Enviar</button>
+    </form>
+    <script src="Formulari_Dom.js"></script>
+</body>
+</html>

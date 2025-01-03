@@ -1,0 +1,35 @@
+/* Fitxer CSS */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e7e7e7;
+    margin: 0;
+}
+
+/* Resultats */
+#resultat01, #resultat02, #resultat03, #resultat04 {
+    background-color: #ffffe0;
+    border: 1px solid #801f1f;
+    padding: 10px;
+    margin: 10px ;
+}
+
+/* Títol */
+h1, h2 {
+    color: #505050;
+    text-align: center;
+    background-color: rgb(208, 139, 114);
+}
+
+/* Llista */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Formulari */
+#selectDistricte {
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid rgb(208, 139, 114);
+}
