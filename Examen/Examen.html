@@ -10,13 +10,13 @@
     <form>
         <!--Nom i Cognoms-->
         <label for="nom">Nom:</label>
-        <input type="text" id="nom" name="nom"><br>
+        <input type="text" id="nom" name="nom" placeholder="Nom"><br>
         <label for="cognom">Cognom:</label>
-        <input type="text" name="cognom" id="cognom"><br><br>
+        <input type="text" name="cognom" id="cognom" placeholder="Cognom" disabled><br><br>
 
         <!--Sexe-->
         <label for="sexe">Sexe:</label>
-        <select name="sexe" id="sexe">
+        <select name="sexe" id="sexe" disabled>
             <option value="Predeterminado">Sexe</option>
             <option value="home">Masculí</option>
             <option value="dona">Femení</option>
@@ -24,7 +24,7 @@
 
         <!--Nivell-->
         <label for="nivell">¿Quin nivell de pàdel tens? (0-7)</label><br>
-        <select name="nivell" id="nivell">
+        <select name="nivell" id="nivell" disabled>
             <option value="Predeterminado" selected>Escoge Una Opción</option>
             <option value="Bajo">0-2,50</option>
             <option value="Medio">2,50-4,00</option>
@@ -34,9 +34,9 @@
 
         <!--Entrenar-->
         <label for="entreno">Entrenes habitualment?</label><br>
-        <input type="radio" name="entreno" id="si" value="si">
+        <input type="radio" name="entreno" id="si" value="si" disabled>
         <label for="si">Sí</label>
-        <input type="radio" name="entreno" id="no" value="no">
+        <input type="radio" name="entreno" id="no" value="no" disabled>
         <label for="no">No</label><br>
         <label for="on">On entrenes?</label>
         <input type="text" id="on" nom="on" placeholder="Augusta Padel, Aurial Sabadell..." disabled><br>
