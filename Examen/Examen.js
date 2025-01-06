@@ -67,3 +67,4 @@ cognom.onfocus=function(){
 cognom.onblur=function(){
     cognom.style.color="gray";
 }
+
