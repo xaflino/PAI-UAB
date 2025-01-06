@@ -14,7 +14,9 @@ function comprova(){
                 break;
             } 
         }
-        if (digits) break;
+        if (digits===true){
+            break;
+        } 
     }
     if (digits===false){
         document.getElementById("resultat").innerHTML="La contrasenya ha de tenir almenys un digit"; 
