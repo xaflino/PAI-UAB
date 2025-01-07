@@ -1,6 +1,31 @@
 const nom = document.getElementById("nom");
 const cognom = document.getElementById("cognom");
 
+// Capitalitzar
+nom.addEventListener("blur",function(){
+    let text=nom.value;
+    let majusN=text[0].toUpperCase();
+    let minusN="";
+    for(let i=1;i<text.length;i++){
+        minusN+=text[i].toLowerCase();
+    }
+    nom.value=majusN+minusN;
+    
+})
+
+cognom.addEventListener("blur",function(){
+    let text=cognom.value;
+    let majusN=text[0].toUpperCase();
+    let minusN="";
+    for(let i=1;i<text.length;i++){
+        minusN+=text[i].toLowerCase();
+    }
+    cognom.value=majusN+minusN;
+    
+})
+
+
+
 // Habilitar Cognom
 document.getElementById("nom").addEventListener("blur", function(){
     if (nom.value!==""){
