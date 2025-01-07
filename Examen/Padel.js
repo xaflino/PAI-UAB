@@ -68,3 +68,22 @@ cognom.onblur=function(){
     cognom.style.color="gray";
 }
 
+// Avisos
+nom.addEventListener("blur",function(){
+    avisNOM=document.getElementById("Snom");
+    if(nom.value==""){
+        document.getElementById("Snom").innerHTML="*Cal omplir aquest camp"
+        avisNOM.style.color="red";
+    }else{
+        avisNOM.innerHTML="";
+    }
+})
+cognom.addEventListener("blur",function(){
+    avisCOGNOM=document.getElementById("Scognom");
+    if(cognom.value==""){
+        document.getElementById("Scognom").innerHTML="*Cal omplir aquest camp"
+        avisCOGNOM.style.color="red";
+    } else{{
+        avisCOGNOM.innerHTML="";
+    }}
+})

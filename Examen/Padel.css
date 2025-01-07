@@ -1,0 +1,20 @@
+span{
+    font-size: smaller;
+    font-style: initial;
+}
+
+form {
+    width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #c49090;
+    background-color: #bcd56d;
+}
+
+h1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(139, 146, 14);
+    background-color: beige;
+    text-align: center;
+}
+
