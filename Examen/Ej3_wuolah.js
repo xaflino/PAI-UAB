@@ -1,32 +1,12 @@
-function compartirEnllacos() {
-    const tercerParagraf = document.getElementById('aquest');
-    
-    const numEnllacos = tercerParagraf.getElementsByTagName('a').length;
+function compartirEnllacos(){
+    const p3=document.getElementById("aquest");
+    const enllaços=p3.getElementsByTagName("a");
 
-    const resultats = document.getElementById('resultats');
-    resultats.innerHTML = numEnllacos;
+    document.getElementById("resultats").innerHTML=enllaços.length;
+// b)
+    const paragraf=document.getElementsByTagName("p");
+    paragraf[0].style.display="none";
+    paragraf[1].style.display="none";
+    paragraf[3].style.display="none";
 }
 
-function compartirEnllacos2() {
-    // Selecciona todos los párrafos
-    const paragrafs = document.querySelectorAll('p');
-    
-    // Oculta todos los párrafos
-    paragrafs.forEach((paragraf) => {
-        paragraf.style.display = 'none';
-    });
-
-    // Muestra solo el tercer párrafo
-    const tercerParagraf = document.getElementById('aquest');
-    tercerParagraf.style.display = 'block';
-    
-    // Cuenta los enlaces en el tercer párrafo
-    const numEnllacos = tercerParagraf.getElementsByTagName('a').length;
-    
-    // Actualiza el contenido del span con el número de enlaces
-    const resultats = document.getElementById('resultats');
-    resultats.innerHTML = numEnllacos;
-    
-    // Muestra también el resultado
-    resultats.parentElement.style.display = 'block';
-}
