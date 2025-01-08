@@ -1,23 +1,340 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Examen PAI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <form name="Dades">
-        <label>Edat: </label>
-        <input type="text" name="edat" id="edat">
-        <span id="resultatEdat"></span><br><br>
-        <button type="button" onclick="comprovaEdat()">Comprovar</button>
-        <br><br>
+    <h1>Examen tipus test: Programació d'Aplicacions a Internet (PAI)</h1>
+    <p><strong>Temari:</strong> Funcions, Objectes, DOM, Formularis, Esdeveniments i WordPress</p>
+    <p><strong>Instruccions:</strong> Cada pregunta té una única resposta correcta. Marqueu la resposta que considereu correcta.</p>
 
-        <label>Salari: </label>
-        <input type="text" name="salari" id="salari">
-        <span id="resultatSalari"></span><br><br>
-        <button type="button" onclick="comprovaSalari()">Comprovar</button>
+    <form id="examForm">
+        <!-- Preguntes -->
+        <div class="question">
+            <p>1. Què retorna una funció en JavaScript si no té cap instrucció return?</p>
+            <label><input type="radio" name="q1" value="a"> a) null</label><br>
+            <label><input type="radio" name="q1" value="b"> b) undefined</label><br>
+            <label><input type="radio" name="q1" value="c"> c) 0</label><br>
+            <label><input type="radio" name="q1" value="d"> d) Una cadena buida</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) undefined</p>
+        </div>
+        <div class="question">
+            <p>2. Quina és la sintaxi correcta per definir una funció anònima?</p>
+            <label><input type="radio" name="q2" value="a"> a) function {}</label><br>
+            <label><input type="radio" name="q2" value="b"> b) () => {}</label><br>
+            <label><input type="radio" name="q2" value="c"> c) function() {}</label><br>
+            <label><input type="radio" name="q2" value="d"> d) var func = {}</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: c) function() {}</p>
+        </div>
+        <div class="question">
+            <p>3. Quina és la manera més eficient de definir una funció amb JavaScript?</p>
+            <label><input type="radio" name="q3" value="a"> a) function nomFuncio() {}</label><br>
+            <label><input type="radio" name="q3" value="b"> b) let nomFuncio = () => {}</label><br>
+            <label><input type="radio" name="q3" value="c"> c) nomFuncio() => {}</label><br>
+            <label><input type="radio" name="q3" value="d"> d) function: nomFuncio => {}</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) let nomFuncio = () => {}</p>
+        </div>
+        <div class="question">
+            <p>4. Què passa si cridem una funció abans de declarar-la a JavaScript?</p>
+            <label><input type="radio" name="q4" value="a"> a) Llença un error</label><br>
+            <label><input type="radio" name="q4" value="b"> b) Retorna undefined</label><br>
+            <label><input type="radio" name="q4" value="c"> c) Funciona si està declarada amb function, però no amb una expressió</label><br>
+            <label><input type="radio" name="q4" value="d"> d) Sempre funciona</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: c) Funciona si està declarada amb function, però no amb una expressió</p>
+        </div>
+        <div class="question">
+            <p>5. Quina de les següents és una funció que retorna el quadrat d’un nombre?</p>
+            <label><input type="radio" name="q5" value="a"> a) function quadrat(x) { return x * x; }</label><br>
+            <label><input type="radio" name="q5" value="b"> b) function quadrat(x) { console.log(x * x); }</label><br>
+            <label><input type="radio" name="q5" value="c"> c) return quadrat(x) => { x * x; }</label><br>
+            <label><input type="radio" name="q5" value="d"> d) let quadrat = x => console.log(x * x);</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) function quadrat(x) { return x * x; }</p>
+        </div>
+        <div class="question">
+            <p>6. Quina és la sintaxi correcta per accedir a una propietat d’un objecte?</p>
+            <label><input type="radio" name="q6" value="a"> a) object->propietat</label><br>
+            <label><input type="radio" name="q6" value="b"> b) object["propietat"]</label><br>
+            <label><input type="radio" name="q6" value="c"> c) object::propietat</label><br>
+            <label><input type="radio" name="q6" value="d"> d) propietat.object</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) object["propietat"]</p>
+        </div>
+        <div class="question">
+            <p>7. Com afegim una nova propietat a un objecte en JavaScript?</p>
+            <label><input type="radio" name="q7" value="a"> a) object.propietat = valor;</label><br>
+            <label><input type="radio" name="q7" value="b"> b) object.add(propietat, valor);</label><br>
+            <label><input type="radio" name="q7" value="c"> c) object.push(propietat: valor);</label><br>
+            <label><input type="radio" name="q7" value="d"> d) object.append(propietat = valor);</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) object.propietat = valor;</p>
+        </div>
+        <div class="question">
+            <p>8. Quina és la manera més llegible i moderna de crear objectes a JavaScript?</p>
+            <label><input type="radio" name="q8" value="a"> a) Amb prototips</label><br>
+            <label><input type="radio" name="q8" value="b"> b) Amb classes</label><br>
+            <label><input type="radio" name="q8" value="c"> c) Amb funcions globals</label><br>
+            <label><input type="radio" name="q8" value="d"> d) Amb arrays</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) Amb classes</p>
+        </div>
+        <div class="question">
+            <p>9. Com es crida un mètode d’un objecte?</p>
+            <label><input type="radio" name="q9" value="a"> a) object.metode[]</label><br>
+            <label><input type="radio" name="q9" value="b"> b) object.metode()</label><br>
+            <label><input type="radio" name="q9" value="c"> c) object.metode</label><br>
+            <label><input type="radio" name="q9" value="d"> d) object->metode()</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) object.metode()</p>
+        </div>
+        <div class="question">
+            <p>10. Com podem afegir una propietat nova a un objecte existent en JavaScript?</p>
+            <label><input type="radio" name="q10" value="a"> a) Usant un bucle for</label><br>
+            <label><input type="radio" name="q10" value="b"> b) Assignant-la directament amb objecte.novaPropietat = valor</label><br>
+            <label><input type="radio" name="q10" value="c"> c) Creant un nou objecte des de zero</label><br>
+            <label><input type="radio" name="q10" value="d"> d) No es poden afegir propietats a objectes existents</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) Assignant-la directament amb objecte.novaPropietat = valor</p>
+        </div>
+        <div class="question">
+            <p>11. Com seleccionem un element per ID amb JavaScript?</p>
+            <label><input type="radio" name="q11" value="a"> a) document.querySelector('#id')</label><br>
+            <label><input type="radio" name="q11" value="b"> b) document.getElementById('id')</label><br>
+            <label><input type="radio" name="q11" value="c"> c) document.select('#id')</label><br>
+            <label><input type="radio" name="q11" value="d"> d) document.getElementByID('#id')</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) document.getElementById('id')</p>
+        </div>
+        <div class="question">
+            <p>12. Quina propietat retorna tots els enllaços d’una pàgina web?</p>
+            <label><input type="radio" name="q12" value="a"> a) document.links</label><br>
+            <label><input type="radio" name="q12" value="b"> b) document.anchors</label><br>
+            <label><input type="radio" name="q12" value="c"> c) document.href</label><br>
+            <label><input type="radio" name="q12" value="d"> d) document.getElementsByLinks</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) document.links</p>
+        </div>
+        <div class="question">
+            <p>13. Què fa la funció addEventListener?</p>
+            <label><input type="radio" name="q13" value="a"> a) Afegeix un estil CSS</label><br>
+            <label><input type="radio" name="q13" value="b"> b) Crea un nou element al DOM</label><br>
+            <label><input type="radio" name="q13" value="c"> c) Assigna un gestor d’esdeveniments a un element</label><br>
+            <label><input type="radio" name="q13" value="d"> d) Retorna un node del DOM</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: c) Assigna un gestor d’esdeveniments a un element</p>
+        </div>
+        <div class="question">
+            <p>14. Com eliminem un element del DOM?</p>
+            <label><input type="radio" name="q14" value="a"> a) element.remove()</label><br>
+            <label><input type="radio" name="q14" value="b"> b) document.deleteElement(element)</label><br>
+            <label><input type="radio" name="q14" value="c"> c) removeChild(element)</label><br>
+            <label><input type="radio" name="q14" value="d"> d) element.removeChild()</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) element.remove()</p>
+        </div>
+        <div class="question">
+            <p>15. Què retorna document.forms.length?</p>
+            <label><input type="radio" name="q15" value="a"> a) Tots els inputs de la pàgina</label><br>
+            <label><input type="radio" name="q15" value="b"> b) El nombre de formularis al document</label><br>
+            <label><input type="radio" name="q15" value="c"> c) Un array de formularis</label><br>
+            <label><input type="radio" name="q15" value="d"> d) La longitud del primer formulari</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) El nombre de formularis al document</p>
+        </div>
+        <div class="question">
+            <p>16. Quin esdeveniment es dispara en seleccionar un element d’un formulari?</p>
+            <label><input type="radio" name="q16" value="a"> a) onselect</label><br>
+            <label><input type="radio" name="q16" value="b"> b) onchange</label><br>
+            <label><input type="radio" name="q16" value="c"> c) onfocus</label><br>
+            <label><input type="radio" name="q16" value="d"> d) onclick</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: c) onfocus</p>
+        </div>
+        <div class="question">
+            <p>17. Quin tipus d’input utilitzem per permetre múltiples seleccions?</p>
+            <label><input type="radio" name="q17" value="a"> a) text</label><br>
+            <label><input type="radio" name="q17" value="b"> b) checkbox</label><br>
+            <label><input type="radio" name="q17" value="c"> c) radio</label><br>
+            <label><input type="radio" name="q17" value="d"> d) textarea</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) checkbox</p>
+        </div>
+        <div class="question">
+            <p>18. Quin atribut fa que un camp sigui obligatori?</p>
+            <label><input type="radio" name="q18" value="a"> a) required</label><br>
+            <label><input type="radio" name="q18" value="b"> b) mandatory</label><br>
+            <label><input type="radio" name="q18" value="c"> c) important</label><br>
+            <label><input type="radio" name="q18" value="d"> d) force</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) required</p>
+        </div>
+        <div class="question">
+            <p>19. Quin és el valor per defecte d’un input de tipus text?</p>
+            <label><input type="radio" name="q19" value="a"> a) Una cadena buida</label><br>
+            <label><input type="radio" name="q19" value="b"> b) null</label><br>
+            <label><input type="radio" name="q19" value="c"> c) undefined</label><br>
+            <label><input type="radio" name="q19" value="d"> d) text</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) Una cadena buida</p>
+        </div>
+        <div class="question">
+            <p>20. Quin esdeveniment en JavaScript es dispara en fer clic al botó d’enviar d’un formulari?</p>
+            <label><input type="radio" name="q20" value="a"> a) onclick</label><br>
+            <label><input type="radio" name="q20" value="b"> b) onsubmit</label><br>
+            <label><input type="radio" name="q20" value="c"> c) onchange</label><br>
+            <label><input type="radio" name="q20" value="d"> d) oninput</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta
+        </div>
+
+        <div class="question">
+            <p>21. Quin esdeveniment es dispara quan un usuari fa clic en un element?</p>
+            <label><input type="radio" name="q21" value="a"> a) onhover</label><br>
+            <label><input type="radio" name="q21" value="b"> b) onclick</label><br>
+            <label><input type="radio" name="q21" value="c"> c) onpress</label><br>
+            <label><input type="radio" name="q21" value="d"> d) onactive</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) onclick</p>
+        </div>
+        <div class="question">
+            <p>22. Quin és l’esdeveniment que es dispara en sortir d’un camp?</p>
+            <label><input type="radio" name="q22" value="a"> a) onblur</label><br>
+            <label><input type="radio" name="q22" value="b"> b) onmouseout</label><br>
+            <label><input type="radio" name="q22" value="c"> c) onleave</label><br>
+            <label><input type="radio" name="q22" value="d"> d) onexit</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) onblur</p>
+        </div>
+        <div class="question">
+            <p>23. Com gestionem més d’un esdeveniment en un mateix element?</p>
+            <label><input type="radio" name="q23" value="a"> a) Afegint diversos addEventListener</label><br>
+            <label><input type="radio" name="q23" value="b"> b) Usant document.events</label><br>
+            <label><input type="radio" name="q23" value="c"> c) Amb element.setEvent()</label><br>
+            <label><input type="radio" name="q23" value="d"> d) Només podem assignar un esdeveniment per element</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) Afegint diversos addEventListener</p>
+        </div>
+        <div class="question">
+            <p>24. Quin esdeveniment permet enviar dades del formulari?</p>
+            <label><input type="radio" name="q24" value="a"> a) onsubmit</label><br>
+            <label><input type="radio" name="q24" value="b"> b) onsend</label><br>
+            <label><input type="radio" name="q24" value="c"> c) onpost</label><br>
+            <label><input type="radio" name="q24" value="d"> d) onload</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: a) onsubmit</p>
+        </div>
+        <div class="question">
+            <p>25. Quin esdeveniment es dispara quan un usuari prem una tecla?</p>
+            <label><input type="radio" name="q25" value="a"> a) onclick</label><br>
+            <label><input type="radio" name="q25" value="b"> b) onkeydown</label><br>
+            <label><input type="radio" name="q25" value="c"> c) onkeypress</label><br>
+            <label><input type="radio" name="q25" value="d"> d) onkeyup</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) onkeydown</p>
+        </div>
+        <div class="question">
+            <p>26. Com accedim al panell d'administració de WordPress?</p>
+            <label><input type="radio" name="q26" value="a"> a) www.example.com/admin</label><br>
+            <label><input type="radio" name="q26" value="b"> b) www.example.com/wp-admin</label><br>
+            <label><input type="radio" name="q26" value="c"> c) www.example.com/control</label><br>
+            <label><input type="radio" name="q26" value="d"> d) www.example.com/dashboard</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) www.example.com/wp-admin</p>
+        </div>
+        <div class="question">
+            <p>27. Quin llenguatge de programació s’utilitza principalment a WordPress?</p>
+            <label><input type="radio" name="q27" value="a"> a) Python</label><br>
+            <label><input type="radio" name="q27" value="b"> b) PHP</label><br>
+            <label><input type="radio" name="q27" value="c"> c) Java</label><br>
+            <label><input type="radio" name="q27" value="d"> d) Ruby</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) PHP</p>
+        </div>
+        <div class="question">
+            <p>28. Quina és la funció principal d’un tema a WordPress?</p>
+            <label><input type="radio" name="q28" value="a"> a) Gestionar el contingut</label><br>
+            <label><input type="radio" name="q28" value="b"> b) Controlar l’estil i l’aparença</label><br>
+            <label><input type="radio" name="q28" value="c"> c) Afegir funcionalitats al panell d’administració</label><br>
+            <label><input type="radio" name="q28" value="d"> d) Crear usuaris</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) Controlar l’estil i l’aparença</p>
+        </div>
+        <div class="question">
+            <p>29. Què són els plugins a WordPress?</p>
+            <label><input type="radio" name="q29" value="a"> a) Plantilles per crear contingut</label><br>
+            <label><input type="radio" name="q29" value="b"> b) Eines per afegir funcionalitats</label><br>
+            <label><input type="radio" name="q29" value="c"> c) Recursos visuals</label><br>
+            <label><input type="radio" name="q29" value="d"> d) Extensions per canviar l’estil</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) Eines per afegir funcionalitats</p>
+        </div>
+        <div class="question">
+            <p>30. Quina diferència hi ha entre una pàgina i una entrada a WordPress?</p>
+            <label><input type="radio" name="q30" value="a"> a) Les pàgines són per a contingut dinàmic, mentre que les entrades són per a contingut estàtic.</label><br>
+            <label><input type="radio" name="q30" value="b"> b) Les entrades estan organitzades cronològicament, mentre que les pàgines són per a contingut estàtic com “Sobre nosaltres” o “Contacte”.</label><br>
+            <label><input type="radio" name="q30" value="c"> c) Les pàgines sempre tenen comentaris, mentre que les entrades no.</label><br>
+            <label><input type="radio" name="q30" value="d"> d) Les entrades no es poden categoritzar, mentre que les pàgines sí.</label><br>
+            <p class="answer" style="display: none; color: green;">Resposta correcta: b) Les entrades estan organitzades cronològicament, mentre que les pàgines són per a contingut estàtic com “Sobre nosaltres” o “Contacte”.</p>
+        </div>
+        
+            
+        <button type="button" onclick="checkAnswers()">Comprova</button>
     </form>
-    <script src="ExEx.js"></script>
+        
+            <p id="score" class="result"></p>
+        
+            <script>
+                // Respostes correctes
+                const correctAnswers = {
+                    q1: 'b',
+                    q2: 'c',
+                    q3: 'b',
+                    q4: 'c',
+                    q5: 'a',
+                    q6: 'b',
+                    q7: 'a',
+                    q8: 'b',
+                    q9: 'b',
+                    q10: 'b',
+                    q11: 'b',
+                    q12: 'a',
+                    q13: 'c',
+                    q14: 'a',
+                    q15: 'b',
+                    q16: 'c',
+                    q17: 'b',
+                    q18: 'a',
+                    q19: 'a',
+                    q20: 'b',
+                    q21: 'b',
+                    q22: 'a',
+                    q23: 'a',
+                    q24: 'a',
+                    q25: 'b',
+                    q26: 'b',
+                    q27: 'b',
+                    q28: 'b',
+                    q29: 'b',
+                    q30: 'b'
+                };
+
+        
+                function checkAnswers() {
+                    const form = document.getElementById('examForm');
+                    const answers = form.querySelectorAll('.answer');
+                    let score = 0;
+                    let total = Object.keys(correctAnswers).length;
+        
+                    // Reseteja la visibilitat de les respostes
+                    answers.forEach(answer => answer.style.display = 'none');
+        
+                    // Comprova les respostes
+                    for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+                        const userAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                        const answerElement = form.querySelector(`.question:nth-child(${Object.keys(correctAnswers).indexOf(question) + 1}) .answer`);
+                        
+                        if (userAnswer && userAnswer.value === correctAnswer) {
+                            score++;
+                        }
+                        
+                        if (answerElement) {
+                            answerElement.style.display = 'block';
+                        }
+                    }
+        
+                    // Mostra la puntuació
+                    document.getElementById('score').textContent = `Has encertat ${score} de ${total} preguntes.`;
+                }
+            </script>
 </body>
 </html>
