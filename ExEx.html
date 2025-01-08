@@ -146,7 +146,7 @@
             <p class="answer" style="display: none; color: green;">Resposta correcta: b) El nombre de formularis al document</p>
         </div>
         <div class="question">
-            <p>16. Quin esdeveniment es dispara en seleccionar un element d’un formulari?</p>
+            <p>16. Quin esdeveniment es dispara en seleccionar un element d’un formulari? EN JAVASCRIPT</p>
             <label><input type="radio" name="q16" value="a"> a) onselect</label><br>
             <label><input type="radio" name="q16" value="b"> b) onchange</label><br>
             <label><input type="radio" name="q16" value="c"> c) onfocus</label><br>
@@ -178,12 +178,12 @@
             <p class="answer" style="display: none; color: green;">Resposta correcta: a) Una cadena buida</p>
         </div>
         <div class="question">
-            <p>20. Quin esdeveniment en JavaScript es dispara en fer clic al botó d’enviar d’un formulari?</p>
+            <p>20. Quin esdeveniment en JavaScript es dispara en fer clic al botó d’enviar d’un formulari? EN JAVASCRIPT</p>
             <label><input type="radio" name="q20" value="a"> a) onclick</label><br>
             <label><input type="radio" name="q20" value="b"> b) onsubmit</label><br>
             <label><input type="radio" name="q20" value="c"> c) onchange</label><br>
             <label><input type="radio" name="q20" value="d"> d) oninput</label><br>
-            <p class="answer" style="display: none; color: green;">Resposta correcta
+            <p class="answer" style="display: none; color: green;">Resposta correcta c) onchange </p>
         </div>
 
         <div class="question">
@@ -295,7 +295,7 @@
                     q17: 'b',
                     q18: 'a',
                     q19: 'a',
-                    q20: 'b',
+                    q20: 'c',
                     q21: 'b',
                     q22: 'a',
                     q23: 'a',
@@ -307,6 +307,21 @@
                     q29: 'b',
                     q30: 'b'
                 };
+                function markIncorrectAnswers() {
+                    const form = document.getElementById('examForm');
+                    const answers = form.querySelectorAll('.answer');
+
+                    for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+                        const userAnswer = form.querySelector(`input[name="${question}"]:checked`);
+                        const answerElement = form.querySelector(`.question:nth-child(${Object.keys(correctAnswers).indexOf(question) + 1}) .answer`);
+        
+                        if (userAnswer && userAnswer.value !== correctAnswer) {
+                        // Si la resposta és incorrecta, marca en vermell
+                        answerElement.style.color = 'red';
+                        answerElement.style.display = 'block';
+                        }
+                    }
+                }
 
         
                 function checkAnswers() {
@@ -334,6 +349,7 @@
         
                     // Mostra la puntuació
                     document.getElementById('score').textContent = `Has encertat ${score} de ${total} preguntes.`;
+                    markIncorrectAnswers();
                 }
             </script>
 </body>
