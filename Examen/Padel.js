@@ -112,3 +112,69 @@ cognom.addEventListener("blur",function(){
         avisCOGNOM.innerHTML="";
     }}
 })
+
+class Jugador{
+    dades(nom, cognom, nivell, entreno){
+        this.nom=nom;
+        this.cognom=cognom;
+        this.nivell=nivell;
+        this.entreno=entreno;
+    }
+}
+
+// Array para almacenar jugadores
+let jugadores = [];
+
+// Botón de enviar
+document.querySelector("button").addEventListener("click", function () {
+    // Validar que todos los campos estén completos
+    if (
+        nom.value === "" ||
+        cognom.value === "" ||
+        document.getElementById("sexe").value === "Predeterminado" ||
+        document.getElementById("nivell").value === "Predeterminado"
+    ) {
+        alert("Por favor, completa todos los campos requeridos.");
+        return;
+    }
+
+    // Obtener valores del formulario
+    let nomValue = nom.value;
+    let cognomValue = cognom.value;
+    let sexeValue = document.getElementById("sexe").value;
+    let nivellValue = document.getElementById("nivell").value;
+    let entrenoValue = document.getElementById("si").checked ? "Sí" : "No";
+    let onValue = document.getElementById("on").value || "No especificado";
+    let diesValue = [];
+    if (document.getElementById("un").checked) diesValue.push("1 dia");
+    if (document.getElementById("dos").checked) diesValue.push("2 dies");
+    if (document.getElementById("més").checked) diesValue.push("Més de 3 dies");
+
+    // Crear un nuevo jugador y guardarlo en el array
+    let jugador = new Jugador();
+    jugador.dades(nomValue, cognomValue, nivellValue, { entreno: entrenoValue, on: onValue, dies: diesValue });
+    jugadores.push(jugador);
+
+    // Mostrar jugadores registrados
+    mostrarJugadores();
+    esborrarFormulari();
+});
+
+
+function esborrarFormulari() {
+    document.getElementById("form1").reset();
+}
+
+// Mostrar jugadores en una lista
+function mostrarJugadores() {
+    // Contenedor donde se mostrará la lista
+    let lista = document.getElementById("jugadores-registrados");
+    lista.innerHTML = ""; // Limpiar lista previa
+
+    // Crear elementos para cada jugador
+    jugadores.forEach((jugador, index) => {
+        let item = document.createElement("li");
+        item.textContent = `${index + 1}. ${jugador.nom} ${jugador.cognom} - Nivell: ${jugador.nivell}, Entreno: ${jugador.entreno.entreno}, On: ${jugador.entreno.on}, Dies: ${jugador.entreno.dies.join(", ")}`;
+        lista.appendChild(item);
+    });
+}
