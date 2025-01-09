@@ -26,13 +26,20 @@ function comprovaEdat(){
     }
     document.getElementById("resultatEdat").innerHTML=numEmpleats;
 }
-function comprovaSalari(){
-    const salariInput=document.getElementById("salari").value;
-    let salariMajor=0;
-    for(let i=0; i<dades.length;i++){
-        if(dades[i].salari>salariInput){
-            salariMajor++;
+
+function comprovaSalari1(){
+    const sInput=parseInt(document.getElementById("salari").value);
+    let mes=false;
+    for(let i=0;i<dades.length;i++){
+        if(sInput<dades[i].salari){
+            mes=true;
+            break;
         }
     }
-    document.getElementById("resultatSalari").innerHTML=salariMajor;
+    if(mes==false){
+        document.getElementById("resultatSalari").innerHTML="No hi ha ningú que cobri més";
+    }else{
+        document.getElementById("resultatSalari").textContent="Si que hi ha gent que cobra més";
+    }
+    
 }
